@@ -1,0 +1,14 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: <Nombre del ingress>
+  namespace: <Nombre del namespace>
+spec:
+  entryPoints:
+    - webs
+  routes:
+  - match: Host(`<dominio completo tal cual esta en el DNS - resuelve por este nombre>`)
+    kind: Rule
+    services:
+    - name: <Nombre del service> 
+      port: <Puerto del service>

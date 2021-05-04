@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+    name: <Nombre del service>
+    namespace: <Nombre del namespace> 
+spec:
+    selector:
+        app: <Nombre usado en el deployment> 
+    ports:
+        - protocol: TCP
+          port: <Puerto del deployment>

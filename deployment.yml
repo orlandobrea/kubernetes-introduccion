@@ -1,0 +1,23 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+    name: <Nombre del deployment>
+    namespace: <Nombre del namespace>
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+          app: <Nombre del deployment>
+    template:
+        metadata:
+            labels: 
+              app: <Nombre del deployment>
+        spec:
+            containers:
+                - name: <Nombre del deployment>
+                  image: <Nombre de la imagen de docker: version>
+                  ports:
+                     - containerPort: <Puertos expuestos internamente>
+                  env:
+                      - name: <Nombre variable de entorno>
+                        value: <Valor de la variable de entorno>

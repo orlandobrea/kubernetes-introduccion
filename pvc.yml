@@ -1,0 +1,12 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+    name: <Nombre del PVC>
+    namespace: <Nombre del namespace> 
+spec:
+    storageClassName: <Nombre del storage class name del cluster>
+    accessModes:
+        - ReadWriteOnce
+    resources:
+        requests:
+            storage: 1Gi 
