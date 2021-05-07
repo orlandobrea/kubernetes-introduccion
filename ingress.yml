@@ -5,7 +5,7 @@ metadata:
   namespace: <Nombre del namespace>
 spec:
   entryPoints:
-    - webs
+    - web
   routes:
   - match: Host(`<dominio completo tal cual esta en el DNS - resuelve por este nombre>`)
     kind: Rule
