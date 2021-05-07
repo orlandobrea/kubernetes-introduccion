@@ -1,11 +1,11 @@
 kind: Service
 apiVersion: v1
 metadata:
-    name: <Nombre del service>
-    namespace: <Nombre del namespace> 
+    name: echoserver
+    namespace: orly
 spec:
     selector:
-        app: <Nombre usado en el deployment> 
+        app: echoserver
     ports:
         - protocol: TCP
-          port: <Puerto del deployment>
+          port: 8080

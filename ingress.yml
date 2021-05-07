@@ -1,14 +1,14 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: <Nombre del ingress>
-  namespace: <Nombre del namespace>
+  name: echoserver 
+  namespace: orly
 spec:
   entryPoints:
-    - webs
+    - web
   routes:
-  - match: Host(`<dominio completo tal cual esta en el DNS - resuelve por este nombre>`)
+  - match: Host(`orly-echoserver.192-168-68-3.nip.io`)
     kind: Rule
     services:
-    - name: <Nombre del service> 
-      port: <Puerto del service>
+    - name: echoserver
+      port: 8080
